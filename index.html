@@ -24,7 +24,9 @@
 
 <p>The first approach is a human written algorithm: take an image's red channel to filter out all non-red colors. Then, look for horizontal red and white stripes. This will lead to a few results which we can then filter out by comparing the faces of the the characters to the face of Waldo. </p>
 
-<p>The second approach involves machine learning. This part is still a little unclear as to how it will be achieved as of yet, but the it will involve some form of studying pictures of Waldo alone and Waldo in group pictures. This will help the machine to learn where Waldo commonly hides and the best way to find him. </p>
+<p>The second approach involves machine learning. We will use a Neural Network to study the image of characters that are and are not Waldo to train the computer. We will normalize the data by taking images and making them all the same size. After the computer is trained, we will be able to have a moving window go over each image and show the parts that produce a positive result: Waldo.</p>
+
+<p>The purpose of this study is to improve the old-fashioned method of finding Waldo by hand. It is also a great learning experience for me because I have never done any sort of image manipulation/processing before.</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/NickyGertman/Website">Where&#39;s Waldo: A Study in Image Processing and Recognition</a> is maintained by <a href="https://github.com/NickyGertman">NickyGertman</a>.</span>
