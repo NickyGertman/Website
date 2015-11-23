@@ -5,6 +5,7 @@ import cv2
 from copy import copy
 
 #Original Where's Waldo Image
+#download the image here: https://cloud.githubusercontent.com/assets/15268123/11333718/a3d6fc9a-9184-11e5-810f-2e1595f2f80c.jpg
 original = cv2.imread('4cd61f6cf43ff9313a84d6c2df7cf5e074041a0ebb450cc13eb9259d.jpg')
 
 #convert image from rgb to hsv (a form that openCV can work with) and grayscale
