@@ -6,15 +6,10 @@ __author__ = 'nicky'
 
 import numpy as np
 from sklearn import cross_validation
-from sklearn import svm
 from sklearn import decomposition
+from sklearn import svm
 from PIL import Image
 
-# sigmoid function
-def nonlin(x,deriv=False):
-    if(deriv==True):
-        return x*(1-x)
-    return 1/(1+np.exp(-x))
 
 imageArray = np.array([])
 isWaldoArray = np.array([])
@@ -27,15 +22,14 @@ for i in range (1,26):
     img = img.convert('L')
     imageArray = np.append(imageArray, np.asarray(img, dtype=np.uint8)) #convert the image to a numpy array of pixels
     isWaldoArray = np.append(isWaldoArray,1) #Waldo's faces get assigned a true valuation
-
-for i in range (1, 26):
     img = Image.open('TrainingImages/Not_Waldo/notWaldo' + i.__str__()+ '.jpg')
     img = img.convert('L')
     imageArray = np.append(imageArray, np.asarray(img, dtype=np.uint8)) #convert the image to a numpy array of pixels
     isWaldoArray = np.append(isWaldoArray,0) #non Waldo faces get assigned a false valuation
-print(len(isWaldoArray))
 
-kFold = cross_validation.StratifiedKFold(isWaldoArray, 3, shuffle=True)
+imageArray = np.reshape(imageArray, (isWaldoArray.shape[0], -1))
+
+kFold = cross_validation.StratifiedKFold(isWaldoArray, 10)
 for train_index, test_index in kFold:
         print("TRAIN:", train_index, "TEST:", test_index)
         X_train, X_test = imageArray[train_index], imageArray[test_index]
@@ -64,11 +58,11 @@ print(X_train.shape)
 X_test_pca = pca.transform(X_test)
 
 # .. classification ..
-#clf = svm.SVC(C=5., gamma=0.001)
-#clf.fit(X_train_pca, y_train)
+clf = svm.SVC(C=5., gamma=0.00001)
+clf.fit(X_train_pca, Y_train)
 
-#print 'Score on unseen data: '
-#print clf.score(X_test_pca, y_test)
+print 'Score on unseen data: '
+print clf.score(X_test_pca, Y_test)
 
 #np.random.seed(1)
 
