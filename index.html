@@ -30,7 +30,9 @@
 
 <p>The first approach is a human written algorithm: take an image's red channel to filter out all non-red colors. This will leave behind only the reds in the image:
 <img src="https://cloud.githubusercontent.com/assets/15268123/11768803/e82d49e0-a18c-11e5-8f84-43a03171c01a.jpg" alt="Reds only">
-Then, we want to look for the areas with both red and white. This will lead to a few results which we can then filter out by comparing the faces of the the characters to the face of Waldo. <a href="https://github.com/NickyGertman/Website/blob/master/RedChannel.py">View this code here.</a></p>
+Then, we want to look for the areas with both red and white. In this image, everything red and white appears white and everything else appears black: 
+<img src="https://cloud.githubusercontent.com/assets/15268123/11768826/9975e0a4-a18d-11e5-94e9-af049eb52040.jpg" alt="redsAndWhites">
+This will lead to a few results which we can then filter out by comparing the faces of the the characters to the face of Waldo. <a href="https://github.com/NickyGertman/Website/blob/master/RedChannel.py">View this code here.</a></p>
 
 <p>The second approach involves machine learning. We will use a Neural Network to study the image of characters that are and are not Waldo to train the computer. This was accomplished by myself first (painstakingly) finding Waldo by hand in 25 different images. Then, I normalized the face data by cropping each of Waldo's faces to be 50x50 pixels. In order to give the computer an example of 'non-Waldo' faces, I did the same by taking 25 face images from the game that were not Waldo. </p>
 
