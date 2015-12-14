@@ -32,7 +32,7 @@
 <h3>
 <a id="first-approach" class="anchor" href="#first-approach" aria-hidden="true"><span class="octicon octicon-link"></span></a>First Approach</h3>
 
-<p>The first approach utilizes color channels to track down Waldo. The first step is to take an image's red channel and filter out all non-red colors. This will leave behind only the reds in the image as seen in Figure 2. The black areas indicate that the area was red in the original image.  <img src="https://cloud.githubusercontent.com/assets/15268123/11768803/e82d49e0-a18c-11e5-8f84-43a03171c01a.jpg" alt="Reds only"> _Figure 2: Red channel filter applied to Where's Waldo puzzle. _</p>
+<p>The first approach utilizes color channels to track down Waldo. The first step is to take an image's red channel and filter out all non-red colors. This will leave behind only the reds in the image as seen in Figure 2. The black areas indicate that the area was red in the original image.  <img src="https://cloud.githubusercontent.com/assets/15268123/11768803/e82d49e0-a18c-11e5-8f84-43a03171c01a.jpg" alt="Reds only"> <em>Figure 2: Red channel filter applied to Where's Waldo puzzle</em></p>
 
 <p>Then I created a white channel filter and applied it to the original image. I combined these two filtered results in order to identify areas that contained both red and white. This combination is shown in Figure 3. In this image, everything red and white is displayed in white and everything else appears black: 
 <img src="https://cloud.githubusercontent.com/assets/15268123/11768826/9975e0a4-a18d-11e5-94e9-af049eb52040.jpg" alt="redsAndWhites"> <em>Figure 3: Red and white channel of Where's Waldo puzzle</em></p>
