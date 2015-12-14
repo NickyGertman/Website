@@ -49,22 +49,19 @@
 
 <p>The actual training process involves using these images as the X-values in a function, and assigning the Y-values as whether the image is Waldo or not. Waldo images are assigned a Y-value of 1 (for true) and non-Waldo images are assigned a Y-value of 0 (for false). Once all of these values are assigned, I use a subset of the images to train a classifier. The classifier has a fit function that  takes the X and Y values and finds the correlation between the two. The correlation is then applied to future 'predictions' - when I test the function by giving it an image and having it detect whether the image is Waldo or not. </p>
 
-<p>Choosing the correct type of classifier proved to be the most difficult aspect of this approach. I tried various training classifiers from the scikit-learn python library in an effort to improve the accuracy of the predictions the machine was making. In order to compare the results between different classifiers, I created multiple versions of the learning algorithm,  The classifiers I used were: <a href="https://github.com/NickyGertman/Website/blob/master/KNearestNeighbors">K-Nearest Neighbors</a>, <a href="https://github.com/NickyGertman/Website/blob/master/NeuralNetwork.py">General Neural Network</a>, <a href="https://github.com/NickyGertman/Website/blob/master/NaiveBayes">Naive Bayes</a>, <a href="https://github.com/NickyGertman/Website/blob/master/PCAandSVM">Support Vector Machine</a> (SVM), and finally <a href="https://github.com/NickyGertman/Website/blob/master/AdaBoost-SAMME">AdaBoost-SAMME</a>. Figure 5 demonstrates the portion of the neural network that I was working to find: the hidden layer.
-<img src="https://cloud.githubusercontent.com/assets/15268123/11772277/cb581f78-a1cf-11e5-9ecd-0bde8b4e2516.JPG" alt="Neural Network"> <em>Figure 5: Neural network flow-map [2]</em></p>
+<p>Choosing the correct type of classifier proved to be the most difficult aspect of this approach. I tried various training classifiers from the scikit-learn python library in an effort to improve the accuracy of the predictions the machine was making. In order to compare the results between different classifiers, I created multiple versions of the learning algorithm,  The classifiers I used were: <a href="https://github.com/NickyGertman/Website/blob/master/KNearestNeighbors">K-Nearest Neighbors</a>, <a href="https://github.com/NickyGertman/Website/blob/master/NeuralNetwork.py">General Neural Network</a>, <a href="https://github.com/NickyGertman/Website/blob/master/NaiveBayes">Naive Bayes</a>, <a href="https://github.com/NickyGertman/Website/blob/master/PCAandSVM">Support Vector Machine</a> (SVM), and finally <a href="https://github.com/NickyGertman/Website/blob/master/AdaBoost-SAMME">AdaBoost-SAMME</a>. Figure 5 demonstrates the portion of the neural network that I was working to find: the hidden layer.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/15268123/11772277/cb581f78-a1cf-11e5-9ecd-0bde8b4e2516.JPG" alt="Neural Network"> <em>Figure 5: Neural network flow-map [2]</em></p>
 
 <p>Classifiers Used:</p>
 
 <ul>
 <li>K-Nearest Neighbor classifies an image by comparing it to its "nearest neighbors" and assigning the classification that matches the majority of its k neighbors [3]. </li>
 <li>The general neural network classifier from scikit-learn is known as "known as unsupervised pre-training" and 
-"tries to maximize the likelihood of the data using a particular graphical model."[4] 
-
-<ul>
+"tries to maximize the likelihood of the data using a particular graphical model."[4] </li>
 <li>Naive Bayes method is a "set of supervised learning algorithms based on applying Bayes’ theorem with the naive' assumption of independence between every pair of features".[5] </li>
 <li>SVM is a supervised learning approach that "builds a model that assigns new examples into one category or the other"[6]. </li>
-<li> AdaBoost-SAMME makes multiple passes over the training data. It will come up with a preliminary 'fit' function and then pass over the data again to test it out. It then changes its weights based on the incorrect predictions in order to make it more accurate. [7]</li>
-</ul>
-</li>
+<li>AdaBoost-SAMME makes multiple passes over the training data. It will come up with a preliminary 'fit' function and then pass over the data again to test it out. It then changes its weights based on the incorrect predictions in order to make it more accurate. [7]</li>
 </ul>
 
 <p>These different classification functions had interesting results for their predictions. The Naive Bayes approach was by far the worst. I ran this version multiple times with multiple sizes of partitions of my data, and on average, it was only 40% accurate (Note: random classification is 50% accurate, so this is very bad.)</p>
