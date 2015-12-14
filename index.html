@@ -45,7 +45,9 @@ Finally, we apply this filter to the original image and circle the positive resu
 
 <p>Then, I ran the generic NN, the Naive Bayes, and SVM. Suprisingly, these three different methods all had similar results to each other. I ran these versions multiple times with multiple sizes of partitions of my data, and on average, they were each about 50% accurate (still not good, but better than before).</p>
 
-<p>Finally, I was able to test the AdaBoost-SAMME algorithm. This one was actually very interesting to me because it makes multiple passes over the training data. It will come up with a preliminary 'fit' function and then pass over the data again to test it out. It then changes its weights based on the incorrect predictions in order to make it more accurate. I performed testing on this method multiple times and with multiple data sets and, on average, I got about 60% accuracy. This is by no means a great triumph in the world of Artificial Intelligence, but it was better than any of the other classifiers I had tried.</p>
+<p>Finally, I was able to test the AdaBoost-SAMME algorithm. This one was actually very interesting to me because it makes multiple passes over the training data. It will come up with a preliminary 'fit' function and then pass over the data again to test it out. It then changes its weights based on the incorrect predictions in order to make it more accurate. I performed testing on this method multiple times and with multiple data sets and, on average, I got about 60% accuracy. This is by no means a great triumph in the world of Artificial Intelligence, but it was better than any of the other classifiers I had tried. Below, this is visualized:</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/15268123/11771697/d38f7d3c-a1c8-11e5-9c8a-64c5b5c34225.JPG" alt="chart"></p>
 
 <p>The purpose of this study is to improve the old-fashioned method of finding Waldo by hand. It is also a great learning experience for me because I have never done any sort of image manipulation/processing before.</p>
 
