@@ -51,31 +51,34 @@
 
 <p>Choosing the correct type of classifier proved to be the most difficult aspect of this approach. I tried various training classifiers from the scikit-learn python library in an effort to improve the accuracy of the predictions the machine was making. In order to compare the results between different classifiers, I created multiple versions of the learning algorithm,  The classifiers I used were: <a href="https://github.com/NickyGertman/Website/blob/master/KNearestNeighbors">K-Nearest Neighbors</a>, <a href="https://github.com/NickyGertman/Website/blob/master/NeuralNetwork.py">General Neural Network</a>, <a href="https://github.com/NickyGertman/Website/blob/master/NaiveBayes">Naive Bayes</a>, <a href="https://github.com/NickyGertman/Website/blob/master/PCAandSVM">Support Vector Machine</a> (SVM), and finally <a href="https://github.com/NickyGertman/Website/blob/master/AdaBoost-SAMME">AdaBoost-SAMME</a>. Figure 5 demonstrates the portion of the neural network that I was working to find: the hidden layer.</p>
 
-<p><img src="https://cloud.githubusercontent.com/assets/15268123/11772277/cb581f78-a1cf-11e5-9ecd-0bde8b4e2516.JPG" alt="Neural Network"> 
-<em>Figure 5: Neural network flow-map [2]</em></p>
+<p><img src="https://cloud.githubusercontent.com/assets/15268123/11772277/cb581f78-a1cf-11e5-9ecd-0bde8b4e2516.JPG" alt="Neural Network"> </p>
+
+<p><em>Figure 5: Neural network flow-map [2]</em></p>
 
 <p>Classifiers Used:</p>
 
 <ul>
 <li>K-Nearest Neighbor classifies an image by comparing it to its "nearest neighbors" and assigning the classification that matches the majority of its k neighbors [3]. </li>
-<li>The general neural network classifier from scikit-learn is known as "known as unsupervised pre-training" and 
+<li>The general neural network classifier from scikit-learn is "known as unsupervised pre-training" and 
 "tries to maximize the likelihood of the data using a particular graphical model."[4] </li>
-<li>Naive Bayes method is a "set of supervised learning algorithms based on applying Bayes’ theorem with the naive' assumption of independence between every pair of features".[5] </li>
+<li>Naive Bayes method is a "set of supervised learning algorithms based on applying Bayes’ theorem with the 'naive' assumption of independence between every pair of features".[5] </li>
 <li>SVM is a supervised learning approach that "builds a model that assigns new examples into one category or the other"[6]. </li>
 <li>AdaBoost-SAMME makes multiple passes over the training data. It will come up with a preliminary 'fit' function and then pass over the data again to test it out. It then changes its weights based on the incorrect predictions in order to make it more accurate. [7]</li>
 </ul>
 
 <p>These different classification functions had interesting results for their predictions. The Naive Bayes approach was by far the worst. I ran this version multiple times with multiple sizes of partitions of my data, and on average, it was only 40% accurate (Note: random classification is 50% accurate, so this is very bad.)</p>
 
-<p>Then, I ran the generic NN, K-Nearest Neighbors, and SVM. Surprisingly, these three different methods all had similar results to each other. I ran these versions multiple times with multiple sizes of partitions of my data, and on average, they were each about 50% accurate (still not good, but better than before).</p>
+<p>Then, I ran the generic NN, K-Nearest Neighbors, and SVM classifiers. Surprisingly, these three different methods all had similar results to each other. I ran these versions multiple times with multiple sizes of partitions of my data, and on average, they were each about 50% accurate (still not good, but better than before).</p>
 
 <p>Finally, I was able to test the AdaBoost-SAMME algorithm. I performed testing on this method multiple times and with multiple data sets and, on average, I got about 60% accuracy. This is by no means a great triumph in the world of Artificial Intelligence, but it was better than any of the other classifiers I had tried. </p>
 
 <p>The accuracy of the different classifiers is visualized in Figure 6. </p>
 
-<p>                                    <img src="https://cloud.githubusercontent.com/assets/15268123/11771697/d38f7d3c-a1c8-11e5-9c8a-64c5b5c34225.JPG" alt="chart"> <em>Figure 6: Rate of correct Waldo predictions according to different classifiers</em></p>
+<p>                                    <img src="https://cloud.githubusercontent.com/assets/15268123/11771697/d38f7d3c-a1c8-11e5-9c8a-64c5b5c34225.JPG" alt="chart"></p>
 
-<p>One thing that probably would have improved the overall results of this research project would have been to increase the size of my data set. More images would have improved the training of the classifiers and would hopefully improve their classification results. I hope to be able to find more data in the future and possibly improve upon this work. </p>
+<p><em>Figure 6: Rate of correct Waldo predictions according to different classifiers</em></p>
+
+<p>One thing that probably would have improved the overall results of this research project would have been to increase the size of my data set. More images would have improved the training of the classifiers and would improve their classification results. I hope to be able to find more data in the future and possibly improve upon this work. </p>
 
 <p>This project was completed in a one semester Artificial Intelligence class. Although the experiment did not have the results I had been hoping for, I do feel that it was a very educational and interesting project. </p>
 
@@ -86,7 +89,7 @@
 
 <p>[2] <a href="http://www.texample.net/tikz/examples/neural-network/">http://www.texample.net/tikz/examples/neural-network/</a></p>
 
-<p>[3]     <a href="https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm">https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm</a></p>
+<p>[3] <a href="https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm">https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm</a></p>
 
 <p>[4] <a href="http://scikit-learn.org/stable/modules/neural_networks.html">http://scikit-learn.org/stable/modules/neural_networks.html</a></p>
 
